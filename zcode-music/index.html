@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zcode Music</title>
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H4FYXW61CZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H4FYXW61CZ');
+  </script>
+</head>
+<body>
+
+  <!-- Шапка сайта -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="image_logo/Logo1.png" alt="Zcode Logo" class="header-logo">
+      </a>
+      <nav class="navbar">
+    <div class="logo">Zcode<span>Music</span></div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="html/features.html">Features</a></li>
+        <li><a href="html/songs.html">Songs</a></li>
+        <li><a href="html/feedback.html">Rate</a></li>
+    </ul>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        ☰
+    </button>
+</nav>
+  </header>
+
+  <!-- Основной контент -->
+  <main class="homepage">
+    <div class="welcome-box fade-in">
+      <div class="welcome-logo-wrap">
+        <img src="image_logo/logo.png" alt="Zcode Music" class="logo">
+      </div>
+      <h2>Xush omaded ar Zcode Music!</h2>
+      <p class="welcome-subtitle"></p>
+      <a href="features.html" class="btn primary-btn">Toydam tar sozen🔗</a>
+    </div>
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <div class="footer-title">© 2026 Zcode. .</div>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-insta">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" stroke="currentColor" stroke-width="2"/>
+          <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="2"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+        </svg>
+        Zcode Instagram
+      </a>
+    </div>
+  </footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+
+    if (navLinks.classList.contains("show")) {
+        menuBtn.textContent = "✕";
+    } else {
+        menuBtn.textContent = "☰";
+    }
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+        menuBtn.textContent = "☰";
+    });
+});
+</script>
+  <!-- Скрипты -->
+  <script src="../js/script.js"></script>
+</body>
+</html>
